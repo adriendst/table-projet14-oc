@@ -1,0 +1,98 @@
+.tableBar {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 890px) {
+    .tableBar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .table {
+        width: 100%;
+    }
+}
+
+.tableBarSection {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+td {
+    padding: 8px 10px;
+    box-sizing: border-box;
+}
+
+th {
+    padding: 10px 0;
+    border-bottom: 1px solid #111;
+}
+
+.tableContainer {
+    display: flex;
+    overflow: auto;
+}
+
+table {
+    min-width: 890px;
+    border-spacing: 0;
+    margin: 10px 0;
+    border-bottom: 1px solid #111;
+}
+
+tbody tr:nth-child(odd),
+.onFilterColumn {
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.headerName {
+    width: 100%;
+}
+
+.arrows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.arrows * {
+    font-size: 8px;
+    opacity: 0.3;
+}
+
+.filterActive {
+    opacity: 1;
+}
+
+.emptyDataMessage {
+    text-align: center;
+}
+
+.input {
+    position: relative;
+}
+
+.input:has(p) input {
+    padding-right: 20px;
+}
+
+.input p {
+    position: absolute;
+    margin: 0;
+    right: 5px;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
